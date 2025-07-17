@@ -17,5 +17,19 @@ resource "azurerm_resource_group" "bbb" {
     location = "east us"
  
 }
+ resource "azurerm_storage_account" "dagar" {
+    name = "demostorag"
+    resource_group_name = azurerm_resource_group.bbb.name
+    location = azurerm_resource_group.bbb.location
+    account_tier = "Standard"
+    account_replication_type = "LRS"
  
-
+}
+resource "azurerm_storage_account" "pagar" {
+    name = "demostorag"
+    resource_group_name = azurerm_resource_group.bbb.name
+    location = azurerm_resource_group.bbb.location
+    account_tier = "Standard"
+    account_replication_type = "LRS"
+ 
+}
