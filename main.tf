@@ -18,11 +18,4 @@ resource "azurerm_resource_group" "bbb" {
  
 }
  
-resource "azurerm_storage_account" "bagar" {
-    name = "demostorag"
-    resource_group_name = azurerm_resource_group.bbb.name
-    location = azurerm_resource_group.bbb.location
-    account_tier = "Standard"
-    account_replication_type = "LRS"
- 
-}
+
